@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <header>
+      <h3>Geo Anayasan</h3>
+      <p>
+        I am student of the University of the Cordillras, currently taking
+        Bachelor of Science in Information Technology.
+      </p>
+    </header>
+    <nav>
+      <li><a href="#Home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </nav>
+    <main>
+      <section id="about">
+        <h2>About Me</h2>
+        <img src="/WebTech/images/Profile.jpg" alt="profile" />
+        <p>
+          Hi, My name is Geo Anayasan. I am a student of Information Technology
+          majoring in Web Technology and is currently studying in the University
+          of the Cordillera.
+        </p>
+      </section>
+      <section id="skills">
+        <h2>My Skills</h2>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>PHP</li>
+          <li>MySQL</li>
+          <li>Git</li>
+        </ul>
+      </section>
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-card">
+          <img src="/WebTech/images/calendar.png" alt="calendar"/>
+          <div>
+            <h3 class="Project-title">Calendar</h3>
+            <p class="description">
+              Set daily schedule and track your day. Just set the date and time
+              of your plan and it will notify you to keep you on track
+            </p>
+            <a href="https://calendar.google.com/">Kalendaryo in Kulas</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="/WebTech/images/notepad.png" alt="notepad" height="120" width="120" />
+          <h3 class="Project-title">Note Pad</h3>
+          <p class="description">is a simple, lightweight tool used for quickly capturing text, lists, or creative ideas without any complex formatting</p>
+          <a href="https://notepad.js.org/">Papel ni Onyo</a>
+        </div>
+        <div class="project-card">
+          <img src="/WebTech/images/calc.png" alt="Calculator" height="120" width="120" />
+          <h3 class="Project-title">Calculator</h3>
+          <p class="description">An interactive web application that enables users to perform arithmetic operations like addition, subtraction, multiplication, and division directly on a webpage.</p>
+          <a href="">Sinaunang talapindutan</a>
+        </div>
+      </section>
+      <section id="contact">
+        <form action="" class="contact-form">
+            <h2>Contact Us</h2>
+            <table>
+                <tr>
+                    <td><label for="name">Name:</label></td>
+                    <td><input type="text" name="name" id="name" required placeholder="First Name, Last Name"></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email: </label></td>
+                    <td><input type="email" name="email address" id="email address" required placeholder="abc123@gmail.com"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="subject">Subject</label>
+                        <td><input type="text" name="subject" id="subject"></td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="message">Message</label>
+                    </td>
+                    <td><textarea name="message" id="message"></textarea></td>
+                </tr>
+                <button type="submit">Submit</button>
+            </table>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <small>&copy; 2026 - Geo Anayasan</small>
+    </footer>
+  </body>
+</html>
