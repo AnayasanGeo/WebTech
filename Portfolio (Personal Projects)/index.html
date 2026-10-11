@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tomorrow Neverland | Landing Page</title>
+</head>
+
+<body>
+    <header>
+        <img src="/Portfolio/images/logo.png" alt="logo">
+        <h2>Tomorrow Neverland</h2>
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="">Destination</a></li>
+                    <li><a href="">Travel Packages</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Contacts</a></li>
+                </ul>
+            </nav>
+
+            <a href="">Book Now</a>
+        </div>
+    </header>
+    <main>
+        <section id="main">
+
+            <h1>Polestar</h1>
+            <p>your guide to your next destination</p>
+
+            <div class="search-bar">
+                <div class="search-field">
+                    <label for="location">Location</label>
+                    <input type="text" name="location" id="location" placeholder="Where are you going">
+                </div>
+
+                <div class="search-field">
+                    <label for="date">Date</label>
+                    <input type="text" name="date" id="date" placeholder="Check-in — Check-out" onfocus="(this.type='date')" onblur="(this.type='text')">
+
+                </div>
+
+                <div class="search-field">
+                    <label for="guest">Guest</label>
+                    <select name="guest" id="guest">
+                        <option value="1-adult">1 Adult</option>
+                        <option value="1-adult-&-1-child">1 Adult & 1 Child</option>
+                        <option value="2-adult">2 Adult</option>
+                        <option value="2-adult-&-1-child">2 Adult & 1 Child</option>
+                        <option value="4-adult">4-8 pax | Adults</option>
+                        <option value="4-adult-&kids">4-8 pax | Adults with Kids</option>
+                    </select>
+                </div>
+
+                <a href="" id="get-deals">Get Deals</a>
+            </div>
+        </section>
+
+        <section id="popular-destination">
+            <h3>Popular Destinations</h3>
+            <a href="">see all destinations</a>
+            <div class="destination-card">
+                <div id="first-card">
+                    <img src="/Portfolio/images/bali.png" alt="Bali">
+                    <h4>Bali, Indonesia</h4>
+                </div>
+                <div id="second-card">
+                    <img src="/Portfolio/images/kyoto.png" alt="Kyoto">
+                    <h4>Kyoto, Japan</h4>
+                </div>
+                <div id="third-card">
+                    <img src="/Portfolio/images/kuala_lumpur.png" alt="">
+                    <h4>Kuala Lumpur, Malaysia</h4>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Polestar - Tomorrow Neverland. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

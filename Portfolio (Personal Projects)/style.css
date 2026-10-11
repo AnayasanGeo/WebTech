@@ -1,0 +1,370 @@
+:root {
+    --brand-primary: #FF5A36;
+    --brand-primary-hover: #E04624;
+    --brand-accent: #008489;
+
+    --text-main: #1C1B1A;            /* Crisp high-contrast off-black */
+    --text-muted: #7E654C;           /* Earthy stone gray-brown */
+    --bg-light: #F4EFEA;             /* Warm soft mountain snow white */
+    --bg-card: #FFFFFF;
+
+     --border-radius-main: 12px;
+    --shadow-smooth: 0 12px 40px rgba(28, 27, 26, 0.15);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==========================================================================
+   1. GLOBAL SYSTEM SETUP & VARIABLE TOKENS (Extracted from Scenery)
+   ========================================================================== */
+:root {
+    /* Brand Accent Colors (Aligned with Logo & Image Elements) */
+    --brand-primary: #FF5A36;        /* High-contrast coral orange from logo and yurt roofs */
+    --brand-primary-hover: #E04624;  /* Deepened shadow coral button hover */
+    --brand-accent: #008489;         /* Mountain reflection teal from logo base */
+    
+    /* Document Layout Shades */
+    --text-main: #1C1B1A;            /* Crisp off-black from foreground mountain horse shadows */
+    --text-muted: #7E654C;           /* Earthy stone gray-brown from dirt hillsides */
+    --bg-light: #F4EFEA;             /* Warm soft white from canvas yurts and snowy peaks */
+    --bg-card: #FFFFFF;              /* Pure clean contrast white */
+    
+    /* Layout Configurations */
+    --border-radius-main: 16px;
+    --border-radius-card: 12px;
+    --shadow-smooth: 0 12px 40px rgba(28, 27, 26, 0.12);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Global Reset Rule */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-smooth);
+}
+
+ul {
+    list-style: none;
+}
+
+/* ==========================================================================
+   2. HEADER & NAVIGATION (Transparent Floating Top Bar)
+   ========================================================================== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+/* Standalone Image Logo Adjustments */
+header > img {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.2));
+}
+
+/* Hides your legacy h2 if it's left in the markup, or styles it to match */
+header h2 {
+    display: none; 
+}
+
+/* Right Side Controls Container */
+header > div {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+header nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+header nav ul a {
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+header nav ul a:hover {
+    color: #FFFFFF;
+    transform: translateY(-1px);
+}
+
+/* "Book Now" Button Style */
+header > div > a {
+    background: rgba(255, 255, 255, 0.2);
+    color: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 10px 24px;
+    border-radius: var(--border-radius-main);
+    font-weight: 600;
+    font-size: 14px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+header > div > a:hover {
+    background: #FFFFFF;
+    color: var(--text-main);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================================================
+   3. HERO BANNER SECTION (#main)
+   ========================================================================== */
+#main {
+    /* Background setup applying your custom dark protective image mask layer */
+    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.35)), 
+                url('/Portfolio/images/background.png') no-repeat center center/cover;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 0 20px;
+}
+
+#main h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+#main p {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 45px;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* ==========================================================================
+   4. GLASSMORPHIC SEARCH BAR
+   ========================================================================== */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: var(--border-radius-main);
+    padding: 12px;
+    width: 100%;
+    max-width: 850px;
+    box-shadow: var(--shadow-smooth);
+}
+
+.search-field {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+    padding: 0 24px;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.search-field:nth-last-of-type(2) {
+    border-right: none; /* Removes line before the submit action button */
+}
+
+.search-field label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.search-field input {
+    border: none;
+    background: transparent;
+    font-size: 15px;
+    color: #FFFFFF;
+    width: 100%;
+    outline: none;
+    font-weight: 500;
+}
+
+.search-field input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Submit Action Button Setup */
+#get-deals {
+    background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-primary-hover) 100%);
+    color: #FFFFFF;
+    padding: 16px 32px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 6px 20px rgba(255, 90, 54, 0.35);
+    white-space: nowrap;
+}
+
+#get-deals:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(255, 90, 54, 0.45);
+}
+
+/* Style target for your native HTML drop-down menu selection */
+.search-field select {
+    border: none;
+    background: transparent;
+    font-size: 15px;
+    color: #FFFFFF;
+    width: 100%;
+    outline: none;
+    font-weight: 500;
+    cursor: pointer;
+    
+    /* Removes the default clunky browser arrow styling */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+/* Styles the drop-down option card background so the text is readable */
+.search-field select option {
+    background-color: var(--bg-card);
+    color: var(--text-main);
+    font-weight: 500;
+    padding: 10px;
+}
+git 
+/* ==========================================================================
+   5. POPULAR DESTINATIONS GRID
+   ========================================================================== */
+#popular-destination {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+/* Top Headline Header Alignment Row */
+#popular-destination h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    display: inline-block;
+}
+
+#popular-destination > a {
+    float: right;
+    color: var(--brand-accent);
+    font-weight: 600;
+    margin-top: 10px;
+    border-bottom: 2px solid transparent;
+}
+
+#popular-destination > a:hover {
+    border-bottom-color: var(--brand-accent);
+}
+
+/* Flexbox Horizontal Card Wrapper Layout */
+.destination-card {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+    clear: both;
+}
+
+/* Reusable structural card styling blocks */
+.destination-card > div {
+    background-color: var(--bg-card);
+    border-radius: var(--border-radius-card);
+    overflow: hidden;
+    flex: 1;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    transition: var(--transition-smooth);
+    cursor: pointer;
+}
+
+.destination-card > div:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-smooth);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.destination-card h4 {
+    padding: 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+/* ==========================================================================
+   6. SITE WIDE FOOTER & RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+footer {
+    background-color: var(--text-main);
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 14px;
+}
+
+/* Responsive Adaptive Adjustments for Tablets and Mobile Layouts */
+@media (max-width: 820px) {
+    header {
+        padding: 15px 24px;
+    }
+    header nav {
+        display: none; /* Toggles text links off for clean viewports */
+    }
+    #main h1 {
+        font-size: 2.8rem;
+    }
+    .search-bar {
+        flex-direction: column;
+        gap: 16px;
+        padding: 20px;
+        background: rgba(28, 27, 26, 0.75); /* Deepens fallbacks over busy layers */
+    }
+    .search-field {
+        width: 100%;
+        padding: 0 0 12px 0;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    #get-deals {
+        width: 100%;
+        text-align: center;
+    }
+    .destination-card {
+        flex-direction: column;
+    }
+}
