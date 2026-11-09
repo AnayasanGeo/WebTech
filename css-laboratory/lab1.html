@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Laboratory 1: Applying CSS to an HTML Page</title>
+    <style>
+      h1 {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>My First CSS Page</h1>
+    <p style="font-family: Arial, Helvetica, sans-serif; color: red">
+      The purpise of CSS is to control the visual presentation and layout of web
+      pages written in HTML
+    </p>
+    <p>
+      You can style a whole website from a single external stylesheet file,
+      ensuring uniform colors, fonts, and layouts across hundreds of pages.
+    </p>
+
+    <h2>Reflection</h2>
+    <h4>What is the difference between inline, internal, and external CSS?</h4>
+    <p>
+      Inline CSS is written directly within an HTML tag to style a single
+      element (e.g &lt;p style&equals; &quot; color&colon; red
+      &semi;&quot;&gt;), while internal CSS is placed in a block in the HTML
+      head to format a single page. External CSS keeps code in a separate .css
+      file linked to the HTML (&lt; link rel&equals;
+      &quot;stylesheet&quot; href=&equals;style&gt;), making it the industry standard for styling
+      an entire multi-page website from one location.
+    </p>
+    <h4>
+      Which method would you use for a website with multiple pages? Explain why
+    </h4>
+    <p>
+      With multiple pages, it is best to use external CSS because it promotes
+      consistency, reuse, and easier maintenance.
+    </p>
+  </body>
+</html>

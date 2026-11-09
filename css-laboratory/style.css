@@ -1,0 +1,28 @@
+body {
+    background-color: lightgray;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h1 {
+    color: navy;
+}
+
+#page-title {
+    text-align: center;
+    font-style: uppercase;
+}
+
+p {
+    font-size: 16px;
+}
+
+.card {
+    background-color: #eeeeee;
+    padding: 15px;
+    margin: 10px;
+}
+
+.card p {
+    color: #444444;
+}
